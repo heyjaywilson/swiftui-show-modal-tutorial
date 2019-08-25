@@ -13,6 +13,7 @@
 		37AA152223122B720016895A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AA152123122B720016895A /* Assets.xcassets */; };
 		37AA152523122B720016895A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AA152423122B720016895A /* Preview Assets.xcassets */; };
 		37AA152823122B720016895A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AA152623122B720016895A /* LaunchScreen.storyboard */; };
+		37AA153023122D0C0016895A /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA152F23122D0C0016895A /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		37AA152423122B720016895A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37AA152723122B720016895A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37AA152923122B720016895A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AA152F23122D0C0016895A /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				37AA152623122B720016895A /* LaunchScreen.storyboard */,
 				37AA152923122B720016895A /* Info.plist */,
 				37AA152323122B720016895A /* Preview Content */,
+				37AA152F23122D0C0016895A /* ModalView.swift */,
 			);
 			path = "modal-example";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				37AA151C23122B700016895A /* AppDelegate.swift in Sources */,
 				37AA151E23122B700016895A /* SceneDelegate.swift in Sources */,
+				37AA153023122D0C0016895A /* ModalView.swift in Sources */,
 				37AA152023122B700016895A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
