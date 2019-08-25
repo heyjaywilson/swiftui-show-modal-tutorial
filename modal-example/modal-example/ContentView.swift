@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    // 2. Declare a variable to describe if the modal is dismissed or not
+    @State private var show_modal: Bool = false
+    
     var body: some View {
         Text("Hello World")
     }
