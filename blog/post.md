@@ -67,3 +67,47 @@ struct ModalView: View {
     }
 }
 ```
+
+## Making the Modal Appear
+
+It's time to make the modal appear from the button push on the first view. Open `ContentView.swift` and add the following to the button.
+
+```swift
+Button(action: {
+        print("Button Pushed")
+        self.show_modal = true
+    }) {
+        Text("Show Modal")
+    }.sheet(isPresented: self.$show_modal) {
+         ModalView()
+        }
+```
+
+What does `.sheet() // more code` do? It is deciding if `ModalView` should be presented when `show_modal` changes.
+
+`.sheet(isPresented: Binding<Bool>){ /* View to present */}` is a modifier that can present the view when `isPresented` is `true`. In our example, `show_modal` is a `Binding<Bool>` because it is declared with `@State`. We also set the view to be presented as `ModalView()`.
+
+`ContentView.swift` should now be complete and look like this.
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var show_modal: Bool = false
+
+    var body: some View {
+        Button(action: {
+            print("Button Pushed")
+            self.show_modal = true
+        }) {
+            Text("Show Modal")
+        }.sheet(isPresented: self.$show_modal) {
+            ModalView()
+        }
+    }
+}
+
+```
+
+Running the application right now, we can dismiss the modal by dragging down from the top of the modal.
+![](https://github.com/maeganjwilson/swiftui-show-modal-tutorial/blob/master/blog/images/drag-to-dismiss.gif?raw=true)
