@@ -6,15 +6,12 @@
 //  Copyright © 2019 MW. All rights reserved.
 //
 
-// 4: Create a new view for the modal
 import SwiftUI
 
 struct ModalView: View {
-    // 5: Decale an environment variable to present the modal
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        // 7. Add a dismiss button
         VStack {
             Button(action: {
                 print("dismisses form")

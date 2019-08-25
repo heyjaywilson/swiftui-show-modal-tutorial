@@ -9,12 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    // 2. Declare a variable to describe if the modal is dismissed or not
     @State private var show_modal: Bool = false
     
     var body: some View {
-        // 3. Add a button
-        // 6. Present the sheet if `show_modal` is true
         Button(action: {
             print("Button Pushed")
             self.show_modal = true
