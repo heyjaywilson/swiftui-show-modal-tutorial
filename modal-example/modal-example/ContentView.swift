@@ -14,10 +14,13 @@ struct ContentView: View {
     
     var body: some View {
         // 3. Add a button
+        // 6. Present the sheet if `show_modal` is true
         Button(action: {
             print("Button Pushed")
         }) {
             Text("Show Modal")
+        }.sheet(isPresented: self.$show_modal) {
+            ModalView()
         }
     }
 }
