@@ -14,7 +14,16 @@ struct ModalView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        Text("This is a modal")
+        // 7. Add a dismiss button
+        VStack {
+            Button(action: {
+                print("dismisses form")
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Dismiss")
+            }.padding(.bottom, 50)
+            Text("This is a modal")
+        }
     }
 }
 
