@@ -13,7 +13,12 @@ struct ContentView: View {
     @State private var show_modal: Bool = false
     
     var body: some View {
-        Text("Hello World")
+        // 3. Add a button
+        Button(action: {
+            print("Button Pushed")
+        }) {
+            Text("Show Modal")
+        }
     }
 }
 
