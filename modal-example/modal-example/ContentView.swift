@@ -17,6 +17,7 @@ struct ContentView: View {
         // 6. Present the sheet if `show_modal` is true
         Button(action: {
             print("Button Pushed")
+            self.show_modal = true
         }) {
             Text("Show Modal")
         }.sheet(isPresented: self.$show_modal) {
