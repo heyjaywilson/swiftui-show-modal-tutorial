@@ -1,3 +1,10 @@
+---
+title: How to Present and Dismiss a Modal in SwiftUI
+published: false
+description: In this post, we will cover how to present and dismiss a modal view.
+tags: swiftui, swift, ios
+---
+
 # How to Present and Dismiss a Modal in SwiftUI
 
 In this post, we will cover how to present and dismiss a modal view.
