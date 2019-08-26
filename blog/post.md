@@ -5,19 +5,20 @@ description: In this post, we will cover how to present and dismiss a modal view
 tags: swiftui, swift, ios
 ---
 
+
 # How to Present and Dismiss a Modal in SwiftUI
 
 In this post, we will cover how to present and dismiss a modal view.
 
 ![](https://github.com/maeganjwilson/swiftui-show-modal-tutorial/blob/master/blog/images/present-dismiss.gif?raw=true)
 
-Find the source code at this Github Repo
+Find the source code at this Github Repo.
 
 {% github maeganjwilson/swiftui-show-modal-tutorial %}
 
 **NOTE**: this tutorial is using **Xcode 11 beta 6** and has been tested using **iOS 13 developer beta 8**.
 
-Let's get started with making a new project using SwiftUI. When creating a new project, make sure that the language is set to Swift and the User Interface is set to SwiftUI like in the picture below.
+Let's get started by making a new project using SwiftUI. When creating a new project, make sure that the language is set to Swift, and the User Interface is configured to SwiftUI like in the picture below.
 
 ![](https://github.com/maeganjwilson/swiftui-show-modal-tutorial/blob/master/blog/images/new-project.png?raw=true)
 
@@ -56,7 +57,7 @@ Go ahead and run the app (Command + R) and click on the button. By clicking on t
 
 ## Create the Modal View
 
-Now, let's create the modal view. Create a new file and change the Text to "This is a Modal". It should look like the code snippet below.
+Now, let's create the modal view. Create a new file and change the Text to "This is a Modal." It should look like the code snippet below.
 
 ```swift
 import SwiftUI
@@ -114,7 +115,7 @@ Running the application right now, we can dismiss the modal by dragging down fro
 
 ## Add a dismiss button
 
-Dragging works to dismiss, but sometimes users would rather hit a button or maybe you want want the user to hit the button to confirm and a drag cancels the opertaion. To add a button to dismiss the modal, we need to put add an Environment variable for `presentationMode` and then call `presentationMode.wrappedValue.dismiss()`. Here is how it looks in `ModalView.swift`.
+Dragging works to dismiss, but sometimes users would instead hit a button, or maybe you want the user to hit the button to confirm, and a drag cancels the operation. To add a button to dismiss the modal, we need to put add an Environment variable for `presentationMode` and then call `presentationMode.wrappedValue.dismiss()`. Here is how it looks in `ModalView.swift`.
 
 ```swift
 struct ModalView: View {
@@ -137,7 +138,7 @@ struct ModalView: View {
 }
 ```
 
-I'm gonna break down what we did.
+I'm going to break down what we did.
 
 1. **Add the environment variable.** This environment variable is what determines when to dismiss the modal.
 2. **Embed the Text in a VStack.** We do this to be able to have a Button view on top of the Text.
