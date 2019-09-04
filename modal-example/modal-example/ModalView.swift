@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ModalView: View {
     @Environment(\.presentationMode) var presentationMode
-    
+    var num: Int
     var body: some View {
         VStack {
             Button(action: {
@@ -18,14 +18,15 @@ struct ModalView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Dismiss")
+                
             }.padding(.bottom, 50)
-            Text("This is a modal")
+            Text("This is a modal for number \(num)")
         }
     }
 }
 
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-        ModalView()
+        ModalView(num: 0)
     }
 }

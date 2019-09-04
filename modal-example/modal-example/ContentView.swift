@@ -7,18 +7,32 @@
 //
 
 import SwiftUI
-
+import Combine
 struct ContentView: View {
+    struct SampleObject: Identifiable {
+        var id = UUID()
+        var num: Int
+        var showModal: ModalHelper = ModalHelper()
+    }
+    
     @State private var show_modal: Bool = false
     
+    let arr = [1, 2, 3, 5, 6]
+    @State var objs = [SampleObject(num: 0), SampleObject(num: 1)]
+    
     var body: some View {
-        Button(action: {
-            print("Button Pushed")
-            self.show_modal = true
-        }) {
-            Text("Show Modal")
-        }.sheet(isPresented: self.$show_modal) {
-            ModalView()
+        List(){
+            ForEach(objs) { obj in
+                Button(action: {
+                    obj.showModal.show_modal = true
+                    print(obj.showModal)
+                }){
+                    Text("Hi")
+                }
+//                .sheet(isPresented: obj.showModal.show_modal) {
+//                    ModalView(num: obj.num)
+//                }
+            }
         }
     }
 }
