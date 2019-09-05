@@ -15,7 +15,9 @@ struct ModalView: View {
         VStack {
             Button(action: {
                 print("dismisses form")
+                print(self.presentationMode.wrappedValue.isPresented)
                 self.presentationMode.wrappedValue.dismiss()
+                print(self.presentationMode.wrappedValue.isPresented)
             }) {
                 Text("Dismiss")
                 

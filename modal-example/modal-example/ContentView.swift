@@ -12,28 +12,25 @@ struct ContentView: View {
     struct SampleObject: Identifiable {
         var id = UUID()
         var num: Int
-        var showModal: ModalHelper = ModalHelper()
     }
     
     @State private var show_modal: Bool = false
+    @State private var presented_obj = 0
     
-    let arr = [1, 2, 3, 5, 6]
-    @State var objs = [SampleObject(num: 0), SampleObject(num: 1)]
+    var objs:[SampleObject] = [SampleObject(num: 0), SampleObject(num: 1)]
     
     var body: some View {
-        List(){
-            ForEach(objs) { obj in
+        List{
+            ForEach(0 ..< objs.count) { i in
                 Button(action: {
-                    obj.showModal.show_modal = true
-                    print(obj.showModal)
+                    self.show_modal.toggle()
+                    self.presented_obj = i
                 }){
-                    Text("Hi")
+                    Text("\(self.objs[i].num)")
                 }
-//                .sheet(isPresented: obj.showModal.show_modal) {
-//                    ModalView(num: obj.num)
-//                }
             }
         }
+        .sheet(isPresented: self.$show_modal,content:{ModalView(num: self.objs[self.presented_obj].num)})
     }
 }
 
